@@ -20,35 +20,16 @@ vertical-align: baseline;
 box-sizing: border-box;
 /* border: 1px solid red; */
 }
-:focus {
-	outline: 0;
-	}
 body {
 	background: white;
 	line-height: 1.5;
 	color: black;
     font-family: 'Kaisei HarunoUmi', serif;
+    /* max-width:100%; */
 	}
-ol, ul {
-	list-style: none;
-	}
-/* tables still need cellspacing="0" in the markup */
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-	}
-caption, th, td {
-	font-weight: normal;
-	text-align: left;
-	}
-/* remove possible quote marks (") from <q> & <blockquote> */
-blockquote:before, blockquote:after, q:before, q:after {
-	content: "";
-	}
-blockquote, q {
-	quotes: "" "";
-	}
-
+html{
+    max-width:100%;
+}
 h1{
     font-size: 50px;
     font-weight: bold;
@@ -192,3 +173,79 @@ button{
 width:80%;
 top:px;
 }
+
+@media(max-width: 800px){
+.links a{
+    width:15%
+}
+.parentOne{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin: 0 auto;
+    padding-left: 20%;
+}
+.one, .two{
+    width:100%;
+}
+.two{
+    margin-right:20%
+}
+.two div{
+    width:95%
+}
+.parentThree{
+    height:40vh
+}
+.parentThree div:last-child{
+    width:20%
+}
+}
+
+@media(max-width: 500px){
+nav h1{
+    width:100%
+}
+.links{
+    flex-wrap:wrap;
+    width:30%;
+    margin:0 auto;
+}
+.links a{
+    width:70%;
+    margin:0 auto;
+}
+/* .parentOne{
+    margin: 0 auto;
+} */
+.parentOne img{
+    width: 400px;
+    height:300px;
+    margin-left: 20%
+}
+.parentOne .two{
+    margin-left:-10%;
+}
+.two{
+    margin:0 auto;
+    /* width:80% */
+}
+.two div{
+    /* align-items:center; */
+    text-align:center;
+}
+.picOne, .picTwo{
+flex-wrap:wrap
+
+}
+.picOne div, .picTwo div{
+width:50%;
+margin-top:10%
+}
+.parentThree{
+    height:25vh
+}
+.parentThree div:last-child{
+    width:30%
+}
+}
+
